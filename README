@@ -1,0 +1,38 @@
+# SENG691-Project
+
+# Real-time Sentiment Analysis Project
+
+This project aims to perform real-time sentiment analysis on tweets using from a data-intensive application.
+
+## Project Structure
+
+- `config/`: Contains configuration files.
+  - `auth_tokens.json`: Stores Twitter API credentials.
+
+- `scripts/`: Contains Python scripts organized by functionality.
+  - `kafka_producer.py`: Kafka producer for streaming tweets.
+  - `kafka_consumer.py`: Kafka consumer for processing tweets.
+  - `persist_to_mongodb.py`: Script to persist tweets to MongoDB.
+  - `spark_kafka_integration.py`: Spark Streaming integration.
+  - `dashboard_app.py`: Flask web application for real-time visualization.
+
+- `requirements.txt`: Lists Python dependencies for the project.
+
+- `templates/`: Holds HTML templates for the web application.
+  - `dashboard.html`: HTML template for the dashboard.
+
+## Setup
+
+1. Install dependencies using `pip install -r requirements.txt`.
+2. Update Twitter API credentials in `config/auth_tokens.json`.
+3. Set up MongoDB Atlas and replace MongoDB URI in `scripts/persist_to_mongodb.py`.
+
+## Usage
+
+1. Run `scripts/kafka_producer.py` to start streaming tweets to Kafka.
+2. Run `scripts/kafka_consumer.py` to consume tweets from Kafka.
+3. Run `scripts/persist_to_mongodb.py` to persist tweets to MongoDB.
+4. Run `scripts/spark_kafka_integration.py` for Spark Streaming integration.
+5. Run `scripts/dashboard_app.py` to start the Flask web application.
+
+For more details, refer to the documentation in each script.
